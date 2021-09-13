@@ -1,7 +1,7 @@
 package com.bridgelabz;
 public class UserRegistrationException extends Exception {
     enum ExceptionType {
-        INVALID_FIRSTNAME;
+        INVALID_FIRSTNAME,INVALID_LASTNAME ;
     }
     ExceptionType type;
     public UserRegistrationException(ExceptionType type, String message) {

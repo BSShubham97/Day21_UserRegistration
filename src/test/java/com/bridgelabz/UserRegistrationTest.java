@@ -12,4 +12,10 @@ class UserRegistrationTest {
         boolean result = userRegistration.validFirstName("Shubham");
         Assertions.assertTrue(result);
     }
+    @Test
+    void Is_LastName_Valid_WithMinimumThreeChar_And_StartingLetterCapital() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validLastName("Bandagale");
+        Assertions.assertTrue(result);
+    }
 }
