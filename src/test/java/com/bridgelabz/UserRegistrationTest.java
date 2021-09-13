@@ -18,4 +18,10 @@ class UserRegistrationTest {
         boolean result = userRegistration.validLastName("Bandagale");
         Assertions.assertTrue(result);
     }
+    @Test
+    void Is_Email_Valid() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validEmail("abc.xyz@bl.co.in");
+        Assertions.assertTrue(result);
+    }
 }
