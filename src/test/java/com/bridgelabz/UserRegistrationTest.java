@@ -24,4 +24,10 @@ class UserRegistrationTest {
         boolean result = userRegistration.validEmail("abc.xyz@bl.co.in");
         Assertions.assertTrue(result);
     }
+    @Test
+    void Is_PhoneNumber_with_CountryCode_and_Space() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validPhoneNumber("91 9000345555");
+        Assertions.assertTrue(result);
+    }
 }
