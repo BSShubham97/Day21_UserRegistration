@@ -54,6 +54,13 @@ class UserRegistrationTest {
     }
 
     @Test
+    void when_PhoneNumber_isInValid() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validPhoneNumber("9000345555");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
     void Is_Password_Valid_with_EightCharacters_Atleastone_CapitalLetter_Number_SpecialCharacter() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validPassword("Haywards@5000");
