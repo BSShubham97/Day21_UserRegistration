@@ -28,7 +28,7 @@ class UserRegistrationTest {
     @Test
     void when_LastName_isInValid() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validLastName("Bandagale");
+        boolean result = userRegistration.validLastName("andagale");
         Assertions.assertTrue(result);
     }
 
@@ -36,6 +36,13 @@ class UserRegistrationTest {
     void Is_Email_Valid() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validEmail("abc.xyz@bl.co.in");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    void when_Email_isInValid() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validEmail("abc.xyzbl.co.in");
         Assertions.assertTrue(result);
     }
 
