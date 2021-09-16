@@ -68,6 +68,13 @@ class UserRegistrationTest {
     }
 
     @Test
+    void when_Password_isInValid() throws UserRegistrationException {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validPassword("aywards5000");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
     void whenCrendentialError_ShouldCheckForException() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validUserRegistartion("Shubham", "Bandagale", "abc.xyz@bl.co.in", "91 9004608888", "Haywards@5000");
