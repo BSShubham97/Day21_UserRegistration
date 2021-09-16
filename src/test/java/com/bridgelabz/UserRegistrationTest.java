@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class UserRegistrationTest {
+    /**
+     * FIRST NAME
+     * @throws UserRegistrationException when invalid entry such as FirstLetter not capital
+     */
     @Test
     void Is_FirstName_Valid_WithMinimumThreeChar_And_StartingLetterCapital() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
@@ -18,6 +22,10 @@ class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * LAST NAME
+     * @throws UserRegistrationException when invalid entry such as LastName FirstLetter not capital
+     */
     @Test
     void Is_LastName_Valid_WithMinimumThreeChar_And_StartingLetterCapital() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
@@ -32,6 +40,10 @@ class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * EMAIL
+     * @throws UserRegistrationException when invalid entry such as not according to email pattern
+     */
     @Test
     void Is_Email_Valid() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
@@ -46,6 +58,10 @@ class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * PHONE NUMBER
+     * @throws UserRegistrationException when invalid entry such as no country code and space or 10 digits
+     */
     @Test
     void Is_PhoneNumber_with_CountryCode_and_Space() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
@@ -60,6 +76,10 @@ class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * PASSWORD
+     * @throws UserRegistrationException when invalid entry such as missing  EightCharacters,Atleastone_CapitalLetter,Number or SpecialCharacter
+     */
     @Test
     void Is_Password_Valid_with_EightCharacters_Atleastone_CapitalLetter_Number_SpecialCharacter() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
